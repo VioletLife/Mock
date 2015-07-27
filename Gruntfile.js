@@ -26,7 +26,8 @@ module.exports = function(grunt) {
         jshint: {
             files: ['Gruntfile.js', 'package.json', 'src/**/*.js', 'test/**/*.js',
                 '!src/xhr.js', '!src/MockHttpRequest.js',
-                '!**/*-prefix.js', '!**/*-suffix.js'
+                '!**/*-prefix.js', '!**/*-suffix.js',
+                '!**/node_modules/**/*.js', '!**/bower_components/**/*.js'
             ],
             options: {
                 jshintrc: '.jshintrc'
@@ -34,10 +35,7 @@ module.exports = function(grunt) {
         },
         qunit: {
             files: [
-                'test/**/*.html',
-                '!test/mock4xtpl.html',
-                '!test/**/noop.*',
-                '!test/xhr.html'
+                'test/mock.html'
             ]
         },
         nodeunit: {
@@ -124,7 +122,7 @@ module.exports = function(grunt) {
             },
             release: {
                 options: {
-                    sourceMap: 'dist/mock-min.map'
+                    sourceMap: './mock-min.map'
                 },
                 files: [{
                     expand: true,

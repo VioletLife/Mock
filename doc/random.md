@@ -730,6 +730,26 @@ TODO 统计 -->
     Random.name(true)
     // => "Helen Carol Martinez"
 
+#### Random.chineseName()
+
+* Random.chineseName()
+* Random.chineseName(count)
+
+随机生成一个常见的中文姓名。
+
+**参数的含义和默认值**如下所示：
+
+* 参数 count：可选。数字。指示姓名的字数，默认为 2 个或 3 个字的随机姓名。
+
+**使用示例**如下所示：
+
+    Random.chineseName()
+    // => "林则徐"
+    Random.chineseName(2)
+    // => "马云"
+
+> `Random.chineseName()` 可以简写为 `Random.cname()`。从 Mock 0.2 开始，将只保留 `Random.cname()`。
+
 ### Web
 
 #### Random.url()
